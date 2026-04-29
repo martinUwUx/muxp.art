@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@font-face {
+  font-family: 'SF Pro';
+  src: url('../assets/fonts/SF-Pro.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro';
+  src: url('../assets/fonts/SF-Pro-Italic.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+:root {
+  --font-sans: "SF Pro", -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --bg-color: #0d0d12;
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1aa;
+
+  /* Glassmorphism Variables */
+  --glass-bg: rgba(30, 30, 35, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.15);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  --glass-blur: blur(90px) saturate(150%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  place-items: center;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle lighting effect for Liquid Glass */
+.glass-panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0) 100%);
+  pointer-events: none;
+}
