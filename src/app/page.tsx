@@ -111,7 +111,7 @@ function App() {
                 Hago <strong>diseño grafico</strong> <AppleEmoji code="1f3a8" /> (moriré de hambre),
                 intento hacer <strong>cine</strong> <AppleEmoji code="1f3ac" /> (moriré de hambre),
                 me gusta <strong>la fotografía</strong> <AppleEmoji code="1f4f7" /> (moriré de hambre),
-                y me gusta <strong>mi novio</strong> <AppleEmoji code="2764-fe0f" /> (lo amo, si sabían? es el mejor novio q existe :3)
+                y me gusta <strong>mi novio</strong> <AppleEmoji code="1f497" /> (lo amo, si sabían? es el mejor novio q existe :3)
               </p>
 
               <div className="links-group">
