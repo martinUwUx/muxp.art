@@ -153,7 +153,7 @@ function App() {
                 <div className="glass-panel widget">
                   <div className="widget-info">
                     <span className="widget-label" style={{ display: 'flex', alignItems: 'center' }}>
-                      AHORA ESCUCHANDO
+                      {nowPlaying.isPlaying ? 'AHORA ESCUCHANDO' : 'OFFLINE AHORA'}
                       {nowPlaying.isPlaying && (
                         <div className="equalizer">
                           <div className="bar"></div>
@@ -163,10 +163,19 @@ function App() {
                         </div>
                       )}
                     </span>
-                    <span className="widget-title">{nowPlaying.title || nowPlaying.album}</span>
-                    <span className="widget-subtitle">{nowPlaying.artist}</span>
+                    <span className="widget-title">
+                      {nowPlaying.isPlaying ? (nowPlaying.title || nowPlaying.album) : 'No estoy escuchando nada'}
+                    </span>
+                    <span className="widget-subtitle">
+                      {nowPlaying.isPlaying ? nowPlaying.artist : 'Spotify / Apple Music'}
+                    </span>
                   </div>
-                  <img src={nowPlaying.coverUrl} fallback="??" alt="Album Cover" className="widget-cover" onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=100&auto=format&fit=crop" }} />
+                  <img 
+                    src={nowPlaying.isPlaying ? nowPlaying.coverUrl : "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=100&auto=format&fit=crop"} 
+                    alt="Album Cover" 
+                    className="widget-cover" 
+                    onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=100&auto=format&fit=crop" }} 
+                  />
                 </div>
               )}
 
