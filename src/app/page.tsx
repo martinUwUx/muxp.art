@@ -111,7 +111,7 @@ function App() {
                 Hago <strong>diseño grafico</strong> <AppleEmoji code="1f3a8" /> (moriré de hambre),
                 intento hacer <strong>cine</strong> <AppleEmoji code="1f3ac" /> (moriré de hambre),
                 me gusta <strong>la fotografía</strong> <AppleEmoji code="1f4f7" /> (moriré de hambre),
-                y me gusta <strong>mi novio</strong> <AppleEmoji code="2764-fe0f" /> (es el mejor chico que existe)
+                y me gusta <strong>mi novio</strong> <AppleEmoji code="2764-fe0f" /> (lo amo, si sabían? es el mejor novio q existe :3)
               </p>
 
               <div className="links-group">
@@ -170,11 +170,11 @@ function App() {
                       {nowPlaying.isPlaying ? nowPlaying.artist : 'Spotify / Apple Music'}
                     </span>
                   </div>
-                  <img 
-                    src={nowPlaying.isPlaying ? nowPlaying.coverUrl : "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=100&auto=format&fit=crop"} 
-                    alt="Album Cover" 
-                    className="widget-cover" 
-                    onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=100&auto=format&fit=crop" }} 
+                  <img
+                    src={nowPlaying.isPlaying ? nowPlaying.coverUrl : "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=100&auto=format&fit=crop"}
+                    alt="Album Cover"
+                    className="widget-cover"
+                    onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=100&auto=format&fit=crop" }}
                   />
                 </div>
               )}
