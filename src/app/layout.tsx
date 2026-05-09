@@ -4,10 +4,10 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://muxp.art"),
   title: "Muxp Art",
-  description: "Portafolio y sitio web personal de Muxp",
+  description: "Portafolio (ojalá) y sitio web personal de Muxp",
   openGraph: {
     title: "Muxp Art",
-    description: "Portafolio y sitio web personal de Muxp",
+    description: "Portafolio (ojalá) y sitio web personal de Muxp",
     url: "https://muxp.art",
     siteName: "Muxp Art",
     locale: "es_ES",
@@ -16,8 +16,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Muxp Art",
-    description: "Portafolio y sitio web personal de Muxp",
-    creator: "@muxp_art", // Cámbialo por tu usuario real de Twitter si tienes
+    description: "Portafolio (ojalá) y sitio web personal de Muxp",
+    creator: "@martinuxpx",
   },
 };
 

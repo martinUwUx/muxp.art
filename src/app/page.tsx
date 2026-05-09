@@ -11,6 +11,7 @@ import instagramLogo from '../assets/Logos/instagram logo.svg';
 import spotifyLogo from '../assets/Logos/spotify logo.svg';
 import encuadreCover from '../assets/encuadre-assets/Rectangle 4.svg';
 import muxpPhoto from '../assets/encuadre-assets/IMG_0987.png';
+import GlassSurface from '../components/GlassSurface';
 import './page.css';
 
 interface Recommendation {
@@ -82,13 +83,33 @@ function App() {
         <main className="content-grid">
           {/* LEFT COLUMN */}
           <div className="left-col">
-            <div className="glass-panel header-pill">
+            <GlassSurface 
+              className="header-pill" 
+              width="auto" 
+              height="auto" 
+              borderRadius={99}
+              blur={20}
+              displace={15}
+              distortionScale={-150}
+              brightness={60}
+              opacity={0.8}
+            >
               <span style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '6px', fontWeight: 500 }}>
                 Por <img src={muxpLogo.src} alt="MUXP" height="14" style={{ filter: 'brightness(0) invert(1)' }} />
               </span>
-            </div>
+            </GlassSurface>
 
-            <div className="glass-panel bio-card">
+            <GlassSurface 
+              className="bio-card" 
+              width="auto" 
+              height="auto" 
+              borderRadius={24}
+              blur={20}
+              displace={15}
+              distortionScale={-150}
+              brightness={60}
+              opacity={0.8}
+            >
               <h1 className="greeting"><AppleEmoji code="1f44b" /> OLAA (tú nombre)</h1>
               <p className="intro">¡Soy Muxp, un gustooo!</p>
 
@@ -137,7 +158,7 @@ function App() {
                   <ArrowRight size={20} color="var(--text-secondary)" />
                 </a>
               </div>
-            </div>
+            </GlassSurface>
           </div>
 
           {/* RIGHT COLUMN */}
@@ -150,7 +171,17 @@ function App() {
 
             <div className="widgets-container">
               {nowPlaying && (
-                <div className="glass-panel widget">
+                <GlassSurface 
+                  className="widget" 
+                  width="auto" 
+                  height="auto" 
+                  borderRadius={24}
+                  blur={20}
+                  displace={15}
+                  distortionScale={-150}
+                  brightness={60}
+                  opacity={0.8}
+                >
                   <div className="widget-info">
                     <span className="widget-label" style={{ display: 'flex', alignItems: 'center' }}>
                       {nowPlaying.isPlaying ? 'AHORA ESCUCHANDO' : 'OFFLINE AHORA'}
@@ -176,11 +207,21 @@ function App() {
                     className="widget-cover"
                     onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=100&auto=format&fit=crop" }}
                   />
-                </div>
+                </GlassSurface>
               )}
 
               {recommendation && (
-                <div className="glass-panel widget">
+                <GlassSurface 
+                  className="widget" 
+                  width="auto" 
+                  height="auto" 
+                  borderRadius={24}
+                  blur={20}
+                  displace={15}
+                  distortionScale={-150}
+                  brightness={60}
+                  opacity={0.8}
+                >
                   <div className="widget-info">
                     <span className="widget-label">RECOMENDACIÓN DEL MES</span>
                     <span className="widget-title">{recommendation.album} - {recommendation.artist}</span>
@@ -190,7 +231,7 @@ function App() {
                   ) : (
                     <img src={recommendation.coverUrl} alt="Recommendation Cover" className="widget-cover" onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1493225457124-a1a2a5f5cb46?q=80&w=100&auto=format&fit=crop" }} />
                   )}
-                </div>
+                </GlassSurface>
               )}
 
               <div className="social-icons">
